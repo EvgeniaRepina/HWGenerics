@@ -9,6 +9,8 @@ public class Manager {
 
     private ProductRepository repository = new ProductRepository();
 
+
+    //    ____________ конструктор________________________
     public Manager(ProductRepository repository) {
         this.repository = repository;
     }
@@ -32,9 +34,9 @@ public class Manager {
 
                 tmp[tmp.length - 1] = trip;
                 result = tmp;
-                Arrays.sort(result);
             }
         }
+        Arrays.sort(result); // лучше отсортировать один раз перед return чем на каждой итерации цикла
         return result;
     }
 

@@ -32,7 +32,8 @@ public class Trip implements Comparable<Trip> {
     //________________алгоритм сравнения для Comparable_________________
     @Override
     public int compareTo(Trip o) {
-        Trip p = (Trip) o;
+//       Trip p = (Trip) o; каст тут лишний - исправлено
+        Trip p = o;
         return cost - p.cost;
     }
 
